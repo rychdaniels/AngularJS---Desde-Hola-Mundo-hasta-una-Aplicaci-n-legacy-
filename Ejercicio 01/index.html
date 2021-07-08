@@ -40,6 +40,41 @@
             Filtro de numero {{ 1350000 | number }} 
         </p>
 
+        <hr>
+        <div class="ngModel">
+            <h1>ng-model</h1>
+            <p>
+                Su nombre: {{nombre | uppercase}}
+                <br>
+                <input class="form-control" ng-model="nombre" type="text" placeholder="Ingrese su nombre">
+            </p>
+
+            <p>
+                Seleccion el pais: {{ pais }}
+                <select class="form-control" ng-model="pais">
+                    <option value="1">Costar Rica</option>
+                    <option value="2">M&eacutexico</option>
+                    <option value="3">Colombia</option>
+                </select>
+            </p>
+
+            <p>
+                Selecciones el checkbox: {{opt1}}  {{opt2}}
+                <br>
+                <input type="checkbox" ng-model="opt1"> Opt 1
+                <br>
+                <input type="checkbox" ng-model="opt2"> Opt 1
+            </p>
+
+            <p>
+                Selecciones un genero: {{ genero }}
+                <br>
+                <input type="radio" value="M" ng-model="genero">Masculino
+                <br>
+                <input type="radio" value="F" ng-model="genero"> Femenino
+            </p>
+        </div>
+
     </div>
     
 </body>
