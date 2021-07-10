@@ -12,20 +12,26 @@ app.controller('profesorCtrl', function($scope){
     // Variable que guradara los datos para despues mostrarlos
     $scope.editando = {};
 
+    // Para mostrar o no lo campos de edicion
+    $scope.mostrarCaja = false;
+
     // Funcion para editar los datos del profesor
     $scope.editarProfesor = function(){
         // Con ayuda de angular copiamos los datos en $scope.editando
         angular.copy( $scope.profesor, $scope.editando );
+        $scope.mostrarCaja = true;
     };
 
     $scope.guardarCambios = function(){
         // Copia los valores de editando en profesor
         angular.copy( $scope.editando, $scope.profesor );
+        $scope.mostrarCaja = false;
 
     };
 
     $scope.cancelarCambios = function() {
         $scope.editando = {};
+        $scope.mostrarCaja = false;
     };
 });
 
