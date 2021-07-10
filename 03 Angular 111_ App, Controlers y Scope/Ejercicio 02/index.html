@@ -7,6 +7,10 @@
 
         <!-- Incluir Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+        <!-- Incluir animate.css -->
+        <link rel="stylesheet" href="css/animate.css">
         
         <!-- Incluir AngularJS -->
         <script src="js/lib/angular.min.js"></script>
@@ -27,7 +31,7 @@
                 
                 <!-- Div que contiene la imagen del profesor -->
                 <div class="col-sm-3">
-                    <section class="panel">
+                    <section class="panel animate__animated animate__flipInY">
                         <div class="panel-body" align="center">
                             <img ng-src="{{ profesor.foto }}" class="img-circle" alt="" width="150px" height="150px">
                         </div>
@@ -49,7 +53,8 @@
                 </div>
             </div>  
             
-            <div class="row" ng-show="mostrarCaja">
+            <!-- Usamos animated.css para animar la aparicion de este div -->
+            <div class="row animate__animated animate__jackInTheBox" ng-show="mostrarCaja">
                 
                 <!-- Div que contiene la imagen del profesor -->
                 <div class="col-sm-6">
