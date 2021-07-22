@@ -16,31 +16,31 @@
 
         <!-- Incluir AngularJS -->
         <script src="js/lib/angular.min.js"></script>
-        <!-- Angular Route -->
-        <script src="js/lib/angular.route.min.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
+
 
         <script src="js/app.js"></script>
-        <!-- Archivo de confguraciones donde se declaran las rutas de la app -->
         <script src="js/config.js"></script>
 
-        <!-- Controladores de las páginas -->
-        <script src="js/alumnosCtrl.js"></script>
-        <script src="js/profesoresCtrl.js"></script>
+        <!-- Controladores de páginas -->
         <script src="js/inicioCtrl.js"></script>
+        <script src="js/profesoresCtrl.js"></script>
+        <script src="js/alumnosCtrl.js"></script>
 
 
-
-    </head>
-    <body>
-      <div ng-include="menuSuperior"></div>
         
+    </head>    
+    <body>
+        
+        <div ng-include="menuSuperior"></div>
 
+        
+        <div class="container">
+        <!-- La pagina principal ira aquí -->
+            
+            <div ng-view></div>
 
-      <div class="container">
-        <!-- El contennido se reemplazará de acuerdo a la ruta y template -->
-        <div ng-view></div>
-      
-      </div><!-- /.container -->
+        </div><!-- /.container -->
 
 
     </body>
