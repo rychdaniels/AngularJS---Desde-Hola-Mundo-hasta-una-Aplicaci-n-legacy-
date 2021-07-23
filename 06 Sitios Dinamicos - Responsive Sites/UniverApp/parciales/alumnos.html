@@ -11,12 +11,16 @@
 			<th>Tel&eacutefono</th>
 		</tr>
 		<tr class="text-center" 
-			ng-repeat="alumno in alumnos">
+			ng-repeat="alumno in alumnos | limitTo:posicion | limitTo:-5">
 			
 			<td>{{alumno.id}}</td>
 			<td>{{alumno.name}}</td>
-			<td>{{alumno.phone | telefono}}</td>
+			<td>{{alumno.phone | telefono}}</td><!-- Aplicamos nuestro filtro personalizado -->
 
 		</tr>
 	</table>
+
+	<!-- Botones para el paginador -->
+	<button class="btn btn-primary" ng-click="anteriores();">Anteriores</button>
+	<button class="btn btn-primary" ng-click="siguientes();">Siguientes</button>
 </div>
