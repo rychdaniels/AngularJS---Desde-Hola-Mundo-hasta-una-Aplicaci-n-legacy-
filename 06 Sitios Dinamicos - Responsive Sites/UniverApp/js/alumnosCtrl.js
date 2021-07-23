@@ -7,6 +7,8 @@ app.controller('alumnosCtrl', ['$scope','$http', function($scope,$http){
 	// Traemos los arhivo de la BD
 	$http.get('https://jsonplaceholder.typicode.com/users')
 		.success(function(data){
+			console.log(data);
+			
 			$scope.alumnos = data;
 		});
 
