@@ -1,0 +1,16 @@
+1.- Entrar a https://www.json-generator.com/
+
+2.- Pegar el siguiente codigo
+[
+  '{{repeat(5)}}',
+  {
+    edad: '{{integer(20, 40)}}',
+    nombre: '{{firstName()}} {{surname()}}'
+  }
+]
+
+3.- Presionar en upload para subir el json generado
+
+4.- Dar en copy JSON file url, para acceder a la data 
+
+5.- Si tuvieramos error con el CORS, poner al final de la url de la DATA el siguiente texto ?callback=JSON_CALLBACK

@@ -7,6 +7,7 @@
 	<script src="js/lib/angular.min.js"></script>
 	<script src="angular/app.js"></script>
 	<script src="angular/controladores.js"></script>
+	<script src="angular/servicios.js"></script>
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -14,10 +15,11 @@
 <body>
 
 
-<div ng-controller="mainCtrl">
-		
-	{{ miVar }}
-
+<div class="container" ng-controller="personasCtrl">
+	<h1>Servicios</h1>
+	<hr>
+	<label ng-show="personas.cargando" class="label-primary">Cargando...</label>
+	<pre>{{ personas }}</pre>
 
 </div>
 
